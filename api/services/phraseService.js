@@ -1,9 +1,9 @@
 const faker = require('faker')
 
-function getRandomWord (minLength) {
+function getRandomPhrase (minLength) {
   return faker.company.catchPhrase()
 }
 
 module.exports = {
-  getRandomWord
+  getRandomPhrase
 }

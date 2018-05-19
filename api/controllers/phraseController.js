@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
 
-const wordsService = require('../services/wordsService')
+const phraseService = require('../services/phraseService')
 
 /* GET home page. */
 router.get('/random', async function (req, res, next) {
-  let randomWord = wordsService.getRandomWord()
-  res.send({word: randomWord})
+  let randomPhrase = phraseService.getRandomPhrase()
+  res.send({phrase: randomPhrase})
 })
 
 module.exports = router
