@@ -23,11 +23,12 @@ const game = (state = INITIAL_STATE, action) => {
       }
     case FETCH_PHRASE_SUCCESS:
       let phrase = action.payload
+      let splitPhrase = phrase.split('')
       return {
         ...state,
         phrase,
-        letterMap: generateLetterMap(phrase),
-        splitPhrase: phrase.split(''),
+        letterMap: generateLetterMap(splitPhrase),
+        splitPhrase,
         fetchingPhrase: false
       }
     case FETCH_PHRASE_FAIL:
