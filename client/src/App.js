@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import logo from './logo.svg'
 import './App.css'
+import bulma from 'bulma'
 
 import Game from './containers/Game'
 
@@ -10,7 +11,11 @@ class App extends Component {
     console.log(this.context)
 
     return (
-      <Game />
+      <section className='section'>
+        <div className='container'>
+          <Game />
+        </div>
+      </section>
     )
   }
 }

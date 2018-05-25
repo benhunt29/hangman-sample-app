@@ -1,17 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Column from '../Column/Column'
+import styles from './Letter.css'
 
 const Letter = (props) => {
   let { visible, character } = props
-  console.log(character)
   let className = visible ? 'guessed-letter' : 'hidden-letter'
   if (character === '') {
     className += ' empty-string'
   }
   return (
-    <span className={className}>
-      {character}
-    </span>
+    <Column className={'is-1'}>
+      <div className={`${className} letter`}>
+        <span>{character}</span>
+      </div>
+    </Column>
   )
 }
 

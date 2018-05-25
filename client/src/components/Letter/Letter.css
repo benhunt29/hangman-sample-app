@@ -1,0 +1,8 @@
+.hidden-letter {
+  border-bottom: black 1px solid;
+  text-align: center; }
+  .hidden-letter span {
+    opacity: 0; }
+
+.letter {
+  text-align: center; }

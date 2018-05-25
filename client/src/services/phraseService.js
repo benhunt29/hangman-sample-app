@@ -1,7 +1,7 @@
 export const generateLetterMap = (phrase = []) => {
   let letterMap = new Map()
 
-  let nonAlphabetical = new RegExp(/[^A-Z]/gi)
+  let nonAlphabetical = new RegExp(/[^A-Z0-9]/gi)
 
   phrase.forEach((char, index) => {
     let lowerCaseChar = char.toLowerCase()
